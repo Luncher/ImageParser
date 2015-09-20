@@ -1,0 +1,30 @@
+{"frames": {
+
+"land.png":
+{
+	"frame": {"x":2,"y":2,"w":50,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":26},
+	"sourceSize": {"w":50,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"water.png":
+{
+	"frame": {"x":54,"y":2,"w":50,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":26},
+	"sourceSize": {"w":50,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "demo1.png",
+	"format": "RGBA8888",
+	"size": {"w":106,"h":30},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:144c88ac9de4bbb39067ffa6a6e493bf:18b1dd8ba949058e93310d0222f95343:7bb276948a4e32c9d1f423eec5715f5f$"
+}
+}

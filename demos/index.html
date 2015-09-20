@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+	<script type="text/javascript" src="./parser-debug.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			var canvas = document.getElementById('main');
+			var ctx = canvas.getContext('2d');
+
+			TextureParser.load('./demo1.json', function(err, texture) {
+				if(err) {
+					console.debug(err.stack);
+					return;
+				}
+				var frame = texture.find('land.png');
+			//	DrawImage.style = DrawImage.STYLE_SCALE;
+			//	DrawImage.draw(ctx, frame.image, 200, 30, 50, 26, frame);
+			//	DrawImage.draw(ctx, frame.image, 200, 130, 100, 52, frame);
+			//	DrawImage.draw(ctx, frame.image, 200, 230, 200, 104, frame);
+
+				DrawImage.style = DrawImage.STYLE_9PITCH;
+				DrawImage.draw(ctx, frame.image, 400, 30, 50, 26, frame);
+				DrawImage.draw(ctx, frame.image, 400, 130, 100, 52, frame);
+				DrawImage.draw(ctx, frame.image, 400, 230, 200, 104, frame);
+			});
+		}
+	</script>
+<body>
+	<div>
+		<center><canvas id="main" style="border-style:dashed;" width=800 height=480></canvas></center>
+	</div>
+</body>
+</html>
