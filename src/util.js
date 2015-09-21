@@ -149,29 +149,6 @@
 	})();
 	util.LoaderImage = LoaderImage;
 
-	var path = (function() {
-		//TODO
-		var path = {
-			join: function() {
-			
-			},
-			
-			extname: function() {
-			
-			},
-
-			normalize: function() {
-			
-			}
-		}
-	});
-	util.path = path;
-
-	//var requestAnimFrame = (function() {	
-	//	return window.requestAnimationFrame;	
-	//})();
-	//util.requestAnimationFrame = requestAnimFrame;
-	
 	util.validType = function(dst, need) {
 		return dst !== null && typeof dst === need;
 	}

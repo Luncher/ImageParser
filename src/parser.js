@@ -58,9 +58,8 @@ var TextureParser = (function(root) {
 		var me = this;
 		var url = urlParser.resolve(options.url, options.image);
 		LoaderImage(url, function(imageElem, state) {
-			var err= null;
 			if(!state) {
-				err = new Error('LoaderImage fail');
+				var err = new Error('LoaderImage fail');
 				onDone(err);
 			}
 			else {

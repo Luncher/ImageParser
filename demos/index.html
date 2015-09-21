@@ -9,21 +9,21 @@
 			var canvas = document.getElementById('main');
 			var ctx = canvas.getContext('2d');
 
-			TextureParser.load('./demo1.json', function(err, texture) {
+			TextureParser.load('./trim-progress.json', function(err, texture) {
 				if(err) {
 					console.debug(err.stack);
 					return;
 				}
-				var frame = texture.find('land.png');
-			//	DrawImage.style = DrawImage.STYLE_SCALE;
-			//	DrawImage.draw(ctx, frame.image, 200, 30, 50, 26, frame);
-			//	DrawImage.draw(ctx, frame.image, 200, 130, 100, 52, frame);
-			//	DrawImage.draw(ctx, frame.image, 200, 230, 200, 104, frame);
+				var frame = texture.find('bg.png');
+				DrawImage.style = DrawImage.STYLE_SCALE;
+				DrawImage.draw(ctx, frame.image, 50, 30, 50, 26, frame);
+				DrawImage.draw(ctx, frame.image, 50, 130, 100, 52, frame);
+				DrawImage.draw(ctx, frame.image, 50, 230, 280, 50, frame);
 
-				DrawImage.style = DrawImage.STYLE_9PITCH;
+				DrawImage.style = DrawImage.STYLE_9PATCH;
 				DrawImage.draw(ctx, frame.image, 400, 30, 50, 26, frame);
 				DrawImage.draw(ctx, frame.image, 400, 130, 100, 52, frame);
-				DrawImage.draw(ctx, frame.image, 400, 230, 200, 104, frame);
+				DrawImage.draw(ctx, frame.image, 400, 230, 280, 50, frame);
 			});
 		}
 	</script>
